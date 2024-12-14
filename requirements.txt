@@ -6,7 +6,9 @@ tensorflow
 torch
 ffmpeg-python
 ffprobe-python           
-transformers     
+transformers  
+sentencepiece
+sentencepiece   
 joblib            
 gTTS              
 pydub            
