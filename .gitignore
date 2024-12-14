@@ -3,6 +3,7 @@
 .pdf
 .ipynb_checkpoints\
 log\
+.log
 glove.6B.100d.txt
 models\
 __pycache__
