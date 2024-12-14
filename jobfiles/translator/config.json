@@ -50,7 +50,7 @@
   "share_encoder_decoder_embeddings": true,
   "static_position_embeddings": true,
   "torch_dtype": "float32",
-  "transformers_version": "4.46.2",
+  "transformers_version": "4.47.0",
   "use_cache": true,
   "vocab_size": 61950
 }
