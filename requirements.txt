@@ -5,7 +5,7 @@ imbalanced-learn
 tensorflow       
 torch
 pydub
-ffmpeg-python         
+ffmpeg-python        
 transformers  
 sentencepiece
 sentencepiece   
