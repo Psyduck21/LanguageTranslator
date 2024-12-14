@@ -32,7 +32,7 @@ logging.basicConfig(
 )
 
 # Model paths
-base_model_path = "D:/Projects/LanguageTranslator/jobfiles"
+base_model_path = "./jobfiles"
 translator_model_path = os.path.join(base_model_path, 'translator')
 summarizer_model_path = os.path.join(base_model_path, 'summarizer')
 
