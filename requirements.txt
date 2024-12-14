@@ -10,4 +10,5 @@ gTTS
 pydub            
 speechrecognition 
 streamlit        
-streamlit-player           
+streamlit-player
+gdown         
