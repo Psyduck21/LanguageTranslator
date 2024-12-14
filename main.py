@@ -35,6 +35,7 @@ logging.basicConfig(
 base_model_path = "./jobfiles"
 translator_model_path = os.path.join(base_model_path, 'translator')
 summarizer_model_path = os.path.join(base_model_path, 'summarizer')
+print("Translator model path:", translator_model_path)
 
 # Helper function to download .safetensor files
 def download_safetensor_file(url, save_dir, filename):
