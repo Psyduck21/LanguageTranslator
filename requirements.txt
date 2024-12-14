@@ -3,7 +3,9 @@ pandas
 scikit-learn      
 imbalanced-learn  
 tensorflow       
-torch             
+torch
+ffmpeg-python
+ffprobe-python           
 transformers     
 joblib            
 gTTS              
