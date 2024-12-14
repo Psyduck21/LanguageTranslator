@@ -1,0 +1,7 @@
+.npz
+.docx
+.pdf
+.ipynb_checkpoints/
+.log
+glove.6B.100d.txt
+models/

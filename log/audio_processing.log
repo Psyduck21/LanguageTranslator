@@ -1,0 +1,15 @@
+2024-12-14 11:14:22,102 - INFO - Downloading ./jobfiles\emotion_model from Google Drive...
+2024-12-14 11:14:22,106 - DEBUG - Starting new HTTPS connection (1): drive.google.com:443
+2024-12-14 11:14:24,375 - DEBUG - https://drive.google.com:443 "GET /uc?id=1J_COkdW3boCXbDSkDOVU_NfRgeNTeak7 HTTP/11" 303 0
+2024-12-14 11:14:24,378 - DEBUG - Starting new HTTPS connection (1): doc-14-5o-docs.googleusercontent.com:443
+2024-12-14 11:14:26,943 - DEBUG - https://doc-14-5o-docs.googleusercontent.com:443 "GET /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/og4dv7dbuj7veedr6qinetjm1sui9pad/1734155025000/16551894835060458683/*/1J_COkdW3boCXbDSkDOVU_NfRgeNTeak7?uuid=d6c4c600-684d-451a-975e-87f8570da4dd HTTP/11" 200 480951
+2024-12-14 11:14:27,432 - INFO - Downloading ./jobfiles\formality_model from Google Drive...
+2024-12-14 11:14:27,450 - DEBUG - Starting new HTTPS connection (1): drive.google.com:443
+2024-12-14 11:14:30,177 - DEBUG - https://drive.google.com:443 "GET /uc?id=1MLESIU4v-bAMgBNam0Cn1PQTyAgCNZKP HTTP/11" 303 0
+2024-12-14 11:14:30,178 - DEBUG - Starting new HTTPS connection (1): doc-08-5o-docs.googleusercontent.com:443
+2024-12-14 11:14:32,889 - DEBUG - https://doc-08-5o-docs.googleusercontent.com:443 "GET /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/cjrgml906i2a7ve1a8rmtvpetnj4qgeq/1734155025000/16551894835060458683/*/1MLESIU4v-bAMgBNam0Cn1PQTyAgCNZKP?uuid=7c20256f-3038-4f09-a950-f0ff30415926 HTTP/11" 200 66028777
+2024-12-14 11:14:56,030 - INFO - Downloading ./jobfiles\sentiment_model from Google Drive...
+2024-12-14 11:14:56,035 - DEBUG - Starting new HTTPS connection (1): drive.google.com:443
+2024-12-14 11:14:59,110 - DEBUG - https://drive.google.com:443 "GET /uc?id=1XKS1Ki-oX-Vc6xi5L7wnzV7gKArEbZ6a HTTP/11" 303 0
+2024-12-14 11:14:59,112 - DEBUG - Starting new HTTPS connection (1): doc-08-5o-docs.googleusercontent.com:443
+2024-12-14 11:15:01,459 - DEBUG - https://doc-08-5o-docs.googleusercontent.com:443 "GET /docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/dvgbcsk68tfh1092376vl4mf0lnduo08/1734155025000/16551894835060458683/*/1XKS1Ki-oX-Vc6xi5L7wnzV7gKArEbZ6a?uuid=7c886e82-68cb-4701-84da-e17e03d71251 HTTP/11" 200 71759065
