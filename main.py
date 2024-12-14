@@ -57,8 +57,8 @@ def download_safetensor_file(url, save_dir, filename):
 translator_model_url = "https://drive.google.com/uc?id=1jnhm9oxrgaonwSGeNVR2vL8EFoy8uzn8"  # Replace with actual file ID
 summarizer_model_url = "https://drive.google.com/uc?id=1lFhQPaOhv_YMf-W-pMjZQHXvA5pbnphL"  # Replace with actual file ID
 
-translator_filename = "model.safetensor" 
-summarizer_filename = "model.safetensor"
+translator_filename = "model.safetensors" 
+summarizer_filename = "model.safetensors"
 
 # Download the .safetensor files if they do not exist
 if not os.path.exists(os.path.join(translator_model_path, translator_filename)):
