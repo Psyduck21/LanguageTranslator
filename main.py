@@ -1,12 +1,13 @@
 import os
 import logging
 import joblib
-import gdown
 from gtts import gTTS
 import speech_recognition as sr
 import re
 from transformers import MarianMTModel, MarianTokenizer, pipeline
+import torch
 from pydub import AudioSegment
+from pydub.utils import which
 
 # Set up logging
 logging.basicConfig(
@@ -15,70 +16,31 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+# Check for ffmpeg installation
+ffmpeg_path = which("ffmpeg")
+if not ffmpeg_path:
+    logging.error("FFmpeg is not installed or not added to PATH. Please install FFmpeg to proceed.")
+    raise EnvironmentError("FFmpeg is required but not found in PATH.")
 
-# Set the path for ffmpeg and ffprobe
-os.environ["FFMPEG_BINARY"] = "/usr/local/bin/ffmpeg"
-os.environ["FFPROBE_BINARY"] = "/usr/local/bin/ffprobe"
-
-
-
-# Set up logging
-logging.basicConfig(
-    filename="./log/audio_processing.log",
-    level=logging.DEBUG,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
-# Model paths
-base_model_path = "./jobfiles"
-translator_model_path = os.path.join(base_model_path, 'translator')
-summarizer_model_path = os.path.join(base_model_path, 'summarizer')
-print("Translator model path:", translator_model_path)
-
-# Helper function to download .safetensor files
-def download_safetensor_file(url, save_dir, filename):
-    """Downloads the .safetensor file only if it does not exist."""
-    file_path = os.path.join(save_dir, filename)
-    if not os.path.exists(file_path):
-        os.makedirs(save_dir, exist_ok=True)
-        logging.info(f"Downloading model from {url} to {file_path}...")
-        try:
-            gdown.download(url, file_path, quiet=False)
-            logging.info(f"Model downloaded successfully to {file_path}")
-        except Exception as e:
-            logging.error(f"Error downloading model from {url}: {e}")
-            raise
-    else:
-        logging.info(f"{file_path} already exists. Skipping download.")
-
-# Model URLs (replace with actual file IDs for .safetensor)
-translator_model_url = "https://drive.google.com/uc?id=1jnhm9oxrgaonwSGeNVR2vL8EFoy8uzn8"  # Replace with actual file ID
-summarizer_model_url = "https://drive.google.com/uc?id=1lFhQPaOhv_YMf-W-pMjZQHXvA5pbnphL"  # Replace with actual file ID
-
-translator_filename = "model.safetensors" 
-summarizer_filename = "model.safetensors"
-
-# Download the .safetensor files if they do not exist
-if not os.path.exists(os.path.join(translator_model_path, translator_filename)):
-    download_safetensor_file(translator_model_url, translator_model_path, translator_filename)
-
-if not os.path.exists(os.path.join(summarizer_model_path, summarizer_filename)):
-    download_safetensor_file(summarizer_model_url, summarizer_model_path, summarizer_filename)
+# Model paths and loading
+model_path = "D:/MiniProject/LanguageTranslator/jobfiles"
+if not os.path.exists(model_path):
+    logging.error(f"Model path does not exist: {model_path}")
+    raise FileNotFoundError(f"Model path not found: {model_path}")
 
 logging.info("Loading models...")
 
-# Load formality, emotion, sentiment models and others
-formality_model = joblib.load(os.path.join(base_model_path, 'formality_analysis.pkl'))
-emotion_model = joblib.load(os.path.join(base_model_path, 'Emotion_classification.pkl'))
-sentiment_model = joblib.load(os.path.join(base_model_path, 'sentiment_analysis.pkl'))
-tfidf_vectorizer = joblib.load(os.path.join(base_model_path, 'tfidf_vectorizer.pkl'))
-scaler = joblib.load(os.path.join(base_model_path, 'scaler.pkl'))
+formality_model = joblib.load(os.path.join(model_path, 'formality_analysis.pkl'))
+emotion_model = joblib.load(os.path.join(model_path, 'Emotion_classification.pkl'))
+sentiment_model = joblib.load(os.path.join(model_path, 'sentiment_analysis.pkl'))
+tfidf_vectorizer = joblib.load(os.path.join(model_path, 'tfidf_vectorizer.pkl'))
+scaler = joblib.load(os.path.join(model_path, 'scaler.pkl'))
 
-# Load translation model
+translator_model_path = os.path.join(model_path, 'translator')
 translator_tokenizer = MarianTokenizer.from_pretrained(translator_model_path, add_prefix_space=False)
 translator_model = MarianMTModel.from_pretrained(translator_model_path)
 
-# Load summarizer model
+summarizer_model_path = os.path.join(model_path, 'summarizer')
 summarizer = pipeline("summarization", model=summarizer_model_path, tokenizer=summarizer_model_path)
 
 logging.info("Models loaded successfully.")
@@ -87,6 +49,7 @@ logging.info("Models loaded successfully.")
 emotion_mapping = {0: "Sadness", 1: "Joy", 2: "Love", 3: "Anger", 4: "Fear", 5: "Surprise"}
 formality_mapping = {1: "Formal", -1: "Informal"}
 sentiment_mapping = {0: "Negative", 2: "Positive"}
+
 
 # Utility Functions
 def preprocess_text(text):
