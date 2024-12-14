@@ -1,7 +1,9 @@
 .npz
 .docx
 .pdf
-.ipynb_checkpoints/
-.log
+.ipynb_checkpoints\
+log\
 glove.6B.100d.txt
-models/
+models\
+__pycache__
+.safetensors
