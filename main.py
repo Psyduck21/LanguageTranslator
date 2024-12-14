@@ -16,15 +16,13 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# Check for ffmpeg installation
-ffmpeg_path = which("ffmpeg")
-if not ffmpeg_path:
-    logging.error("FFmpeg is not installed or not added to PATH. Please install FFmpeg to proceed.")
-    raise EnvironmentError("FFmpeg is required but not found in PATH.")
+# # Check for ffmpeg installation
+# ffmpeg_path = which("ffmpeg")
+# if not ffmpeg_path:
+#     logging.error("FFmpeg is not installed or not added to PATH. Please install FFmpeg to proceed.")
+#     raise EnvironmentError("FFmpeg is required but not found in PATH.")
 
-import os
-import logging
-import gdown
+
 
 # Set up logging
 logging.basicConfig(
@@ -59,7 +57,7 @@ translator_model_url = "https://drive.google.com/uc?id=1jnhm9oxrgaonwSGeNVR2vL8E
 summarizer_model_url = "https://drive.google.com/uc?id=1lFhQPaOhv_YMf-W-pMjZQHXvA5pbnphL"  # Replace with actual file ID
 
 translator_filename = "model.safetensor" 
-summarizer_filename = ".safetensor"
+summarizer_filename = "model.safetensor"
 
 # Download the .safetensor files if they do not exist
 if not os.path.exists(os.path.join(translator_model_path, translator_filename)):
