@@ -15,4 +15,5 @@ pydub
 speechrecognition 
 streamlit        
 streamlit-player
-gdown         
+gdown   
+tf-keras      
