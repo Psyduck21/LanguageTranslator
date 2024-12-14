@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-from main2 import process_audio
+from main import process_audio
 
 # Set up page configuration
 st.set_page_config(
