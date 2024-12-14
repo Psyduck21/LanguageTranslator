@@ -7,7 +7,6 @@ import speech_recognition as sr
 import re
 from transformers import MarianMTModel, MarianTokenizer, pipeline
 from pydub import AudioSegment
-from pydub.utils import which
 
 # Set up logging
 logging.basicConfig(
@@ -16,11 +15,10 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# # Check for ffmpeg installation
-# ffmpeg_path = which("ffmpeg")
-# if not ffmpeg_path:
-#     logging.error("FFmpeg is not installed or not added to PATH. Please install FFmpeg to proceed.")
-#     raise EnvironmentError("FFmpeg is required but not found in PATH.")
+
+# Set the path for ffmpeg and ffprobe
+os.environ["FFMPEG_BINARY"] = "/usr/local/bin/ffmpeg"
+os.environ["FFPROBE_BINARY"] = "/usr/local/bin/ffprobe"
 
 
 
