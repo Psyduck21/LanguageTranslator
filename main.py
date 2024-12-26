@@ -17,10 +17,10 @@ logging.basicConfig(
 )
 
 # Check for ffmpeg installation
-ffmpeg_path = which("ffmpeg")
-if not ffmpeg_path:
-    logging.error("FFmpeg is not installed or not added to PATH. Please install FFmpeg to proceed.")
-    raise EnvironmentError("FFmpeg is required but not found in PATH.")
+# ffmpeg_path = which("ffmpeg")
+# if not ffmpeg_path:
+#     logging.error("FFmpeg is not installed or not added to PATH. Please install FFmpeg to proceed.")
+#     raise EnvironmentError("FFmpeg is required but not found in PATH.")
 
 # Model paths and loading
 model_path = "./jobfiles"
