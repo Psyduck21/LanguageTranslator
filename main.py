@@ -23,7 +23,7 @@ if not ffmpeg_path:
     raise EnvironmentError("FFmpeg is required but not found in PATH.")
 
 # Model paths and loading
-model_path = "D:/MiniProject/LanguageTranslator/jobfiles"
+model_path = "./jobfiles"
 if not os.path.exists(model_path):
     logging.error(f"Model path does not exist: {model_path}")
     raise FileNotFoundError(f"Model path not found: {model_path}")
