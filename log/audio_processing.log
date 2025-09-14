@@ -1,0 +1,84 @@
+2025-09-14 15:03:40,528 - INFO - Loading models...
+2025-09-14 15:03:41,500 - INFO - Loading en-fr model from local storage...
+2025-09-14 15:03:42,013 - WARNING - From D:\Project\LanguageTranslator\myenv\Lib\site-packages\tf_keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2025-09-14 15:03:49,550 - INFO - Loading en-ja model from local storage...
+2025-09-14 15:03:56,241 - INFO - Loading en-hi model from local storage...
+2025-09-14 15:04:03,017 - INFO - Loading t5-small model from local storage...
+2025-09-14 15:04:04,861 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-14 15:04:30,830 - WARNING - From D:\Project\LanguageTranslator\myenv\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-09-14 15:07:16,087 - INFO - Loading models...
+2025-09-14 15:07:16,302 - INFO - Loading en-fr model from local storage...
+2025-09-14 15:07:22,496 - INFO - Loading en-ja model from local storage...
+2025-09-14 15:07:29,205 - INFO - Loading en-hi model from local storage...
+2025-09-14 15:07:35,918 - INFO - Loading t5-small model from local storage...
+2025-09-14 15:07:37,396 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-14 15:08:09,398 - INFO - {'en-fr': {'model': <transformers.models.marian.modeling_tf_marian.TFMarianMTModel object at 0x000001BEEDB0B250>, 'tokenizer': MarianTokenizer(name_or_path='./pre-models\en-fr', vocab_size=59514, model_max_length=512, is_fast=False, padding_side='right', truncation_side='right', special_tokens={'eos_token': '</s>', 'unk_token': '<unk>', 'pad_token': '<pad>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	0: AddedToken("</s>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	1: AddedToken("<unk>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	59513: AddedToken("<pad>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)}, 'en-ja': {'model': <transformers.models.marian.modeling_tf_marian.TFMarianMTModel object at 0x000001BEEDFB88D0>, 'tokenizer': MarianTokenizer(name_or_path='./pre-models\en-ja', vocab_size=65001, model_max_length=512, is_fast=False, padding_side='right', truncation_side='right', special_tokens={'eos_token': '</s>', 'unk_token': '<unk>', 'pad_token': '<pad>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	0: AddedToken("</s>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	1: AddedToken("<unk>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	65000: AddedToken("<pad>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)}, 'en-hi': {'model': <transformers.models.marian.modeling_tf_marian.TFMarianMTModel object at 0x000001BEEF5C85D0>, 'tokenizer': MarianTokenizer(name_or_path='./pre-models\en-hi', vocab_size=61950, model_max_length=512, is_fast=False, padding_side='right', truncation_side='right', special_tokens={'eos_token': '</s>', 'unk_token': '<unk>', 'pad_token': '<pad>'}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	0: AddedToken("</s>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	1: AddedToken("<unk>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	61949: AddedToken("<pad>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)}}
+2025-09-14 15:08:09,399 - INFO - Models loaded successfully.
+2025-09-14 15:57:18,105 - INFO - Processing input data
+2025-09-14 15:57:18,105 - INFO - Processing user input text : hello
+2025-09-14 15:57:18,105 - INFO - Classifying text
+2025-09-14 15:57:18,203 - INFO - Done Classification
+2025-09-14 15:57:18,204 - INFO - Summarizing text
+2025-09-14 15:57:18,204 - INFO -  text: hello
+2025-09-14 15:57:18,204 - INFO -  text length 1
+2025-09-14 15:57:18,204 - INFO -  Maax length 15
+2025-09-14 15:57:18,204 - INFO -  Min length 5
+2025-09-14 15:57:22,722 - INFO - Summary output: [{'summary_text': 'hello hello .'}]
+2025-09-14 15:57:22,722 - INFO - Translating text to hi
+2025-09-14 15:57:25,425 - INFO - Done Translating: \u0938\u0932\u093e\u092e
+2025-09-14 15:57:25,425 - INFO - hi : \u0938\u0932\u093e\u092e
+2025-09-14 15:57:25,425 - INFO - Converting translated text to speech
+2025-09-14 15:57:25,426 - INFO - Converting text to speech. Output file: ./output/hi.mp3
+2025-09-14 15:57:25,787 - INFO - Text-to-speech conversion successful. Saved at: ./output/hi.mp3
+2025-09-14 15:57:25,788 - INFO - Text-to-Speech conversion complete
+2025-09-14 15:57:55,668 - INFO - Processing input data
+2025-09-14 15:57:55,668 - INFO - Processing user input text : hello
+2025-09-14 15:57:55,669 - INFO - Classifying text
+2025-09-14 15:57:55,673 - INFO - Done Classification
+2025-09-14 15:57:55,673 - INFO - Summarizing text
+2025-09-14 15:57:55,673 - INFO -  text: hello
+2025-09-14 15:57:55,674 - INFO -  text length 1
+2025-09-14 15:57:55,674 - INFO -  Maax length 15
+2025-09-14 15:57:55,674 - INFO -  Min length 5
+2025-09-14 15:57:59,021 - INFO - Summary output: [{'summary_text': 'hello hello .'}]
+2025-09-14 15:57:59,022 - INFO - Translating text to hi
+2025-09-14 15:58:00,609 - INFO - Done Translating: \u0938\u0932\u093e\u092e
+2025-09-14 15:58:00,609 - INFO - hi : \u0938\u0932\u093e\u092e
+2025-09-14 15:58:00,609 - INFO - Converting translated text to speech
+2025-09-14 15:58:00,609 - INFO - Converting text to speech. Output file: ./output/hi.mp3
+2025-09-14 15:58:00,868 - INFO - Text-to-speech conversion successful. Saved at: ./output/hi.mp3
+2025-09-14 15:58:00,868 - INFO - Text-to-Speech conversion complete
+2025-09-14 15:58:34,738 - INFO - Processing input data
+2025-09-14 15:58:34,738 - INFO - Processing user input text : Hello! How are you i am good. what about you?
+2025-09-14 15:58:34,738 - INFO - Classifying text
+2025-09-14 15:58:34,786 - INFO - Done Classification
+2025-09-14 15:58:34,786 - INFO - Summarizing text
+2025-09-14 15:58:34,786 - INFO -  text: Hello! How are you i am good. what about you?
+2025-09-14 15:58:34,786 - INFO -  text length 10
+2025-09-14 15:58:34,786 - INFO -  Maax length 15
+2025-09-14 15:58:34,786 - INFO -  Min length 5
+2025-09-14 15:58:42,264 - INFO - Summary output: [{'summary_text': 'how are you i am good? what about you?'}]
+2025-09-14 15:58:42,265 - INFO - Translating text to hi
+2025-09-14 15:58:53,370 - INFO - Done Translating: \u0939\u0948\u0932\u094b, \u0924\u0941\u092e \u0915\u0948\u0938\u0947 \u0905\u091a\u094d\u091b\u0947 \u0939\u094b. \u0906\u092a \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u0915\u094d\u092f\u093e?
+2025-09-14 15:58:53,371 - INFO - hi : \u0939\u0948\u0932\u094b, \u0924\u0941\u092e \u0915\u0948\u0938\u0947 \u0905\u091a\u094d\u091b\u0947 \u0939\u094b. \u0906\u092a \u0915\u0947 \u092c\u093e\u0930\u0947 \u092e\u0947\u0902 \u0915\u094d\u092f\u093e?
+2025-09-14 15:58:53,371 - INFO - Converting translated text to speech
+2025-09-14 15:58:53,371 - INFO - Converting text to speech. Output file: ./output/hi.mp3
+2025-09-14 15:58:54,154 - INFO - Text-to-speech conversion successful. Saved at: ./output/hi.mp3
+2025-09-14 15:58:54,154 - INFO - Text-to-Speech conversion complete
