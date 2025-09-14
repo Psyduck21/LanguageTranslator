@@ -1,8 +1,8 @@
 *.ipynb_checkpoints
-log\
+log/
 *.log
 glove.6B.100d.txt
-pre-models\
+pre-models/
 __pycache__
 *.safetensors
 *.mp3
