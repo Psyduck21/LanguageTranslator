@@ -2,7 +2,8 @@
 log\
 *.log
 glove.6B.100d.txt
-models\
+pre-models\
 __pycache__
 *.safetensors
 *.mp3
+myenv/
