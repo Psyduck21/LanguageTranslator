@@ -50,7 +50,7 @@ Follow these steps to set up the project on your local machine:
    ```
 
 4. **Download Pre-trained Models** (if applicable):
-   - Place the pre-trained models in the `Models/` directory.
+   - It will automatically download models in `pre-models/` directory.
    - Dowload glove.6B.100d.txt from [GloVe on Stanford NLP](https://nlp.stanford.edu/projects/glove/) Place the file in `Models/Emotion Classifier/`
 
 5. **Run the Application**:
