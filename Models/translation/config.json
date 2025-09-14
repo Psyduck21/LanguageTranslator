@@ -1,0 +1,5 @@
+{
+    "base_model_dir": "D:/MiniProject/LanguageTranslator/jobfiles/",
+    "asr_model_dir": "transcriber",
+    "translation_model_dir": "translator"
+}
